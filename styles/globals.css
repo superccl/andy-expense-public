@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Shadows+Into+Light&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Poppins', system-ui, sans-serif;
+    @apply bg-primary text-secondary m-0 p-0 box-border dark:bg-secondary dark:text-primary/80;
+  }
+
+  #__next {
+    @apply h-[100vh] w-[100vw] overflow-x-hidden flex flex-col;
+  }
+}
+
+::-webkit-scrollbar {
+  @apply w-4
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full border-4 border-solid border-transparent bg-clip-content bg-secondary/60 hover:bg-secondary/75 dark:bg-primary-900/60 dark:hover:bg-primary-900/40;
+}
+
+.button-accent {
+  @apply bg-accent-900/80 hover:bg-accent-900 dark:bg-accent dark:hover:bg-accent/80;
+}
+
+.txt-accent {
+  @apply text-accent/80 dark:text-accent;
+}
+
+.bg-900 {
+  @apply bg-primary-900 dark:bg-secondary-900;
+}
+
+.bg-hover {
+  @apply cursor-pointer transition-colors hover:bg-primary-800 dark:hover:bg-secondary-800;
+}
+
+.bg-main {
+  @apply bg-primary text-secondary dark:bg-secondary dark:text-primary/80;
+}
+
+.text-small {
+  @apply text-sm opacity-70 dark:opacity-60
+}
+
+.w-main {
+  width: clamp(50vw, 800px, 100vw);
+}
+
+.active {
+  @apply border-b-2 border-b-accent-900/80 dark:border-b-accent xl:border-none xl:bg-primary-900 xl:dark:bg-secondary-900;
+}
